@@ -68,6 +68,7 @@ public class SpringApplication {
                 Object component= newInstance(constructor);
                 //将简单的component对象放入容器
                 diContainer.简单bean.put(leftClass,component);
+                //将生成的代理类的字节码文件放在java目录下
                 System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "D:\\java\\aopaop\\src\\main\\java\\aop框架");
                 //创建CGLIB核心的类
                 Enhancer enhancer=new Enhancer();
